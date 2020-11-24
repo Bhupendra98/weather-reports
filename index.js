@@ -11,8 +11,8 @@ window.addEventListener("load", () => {
     let cityname = city.value;
     cityname = cityname.charAt(0).toUpperCase() + cityname.slice(1)
     // console.log(cityname);
-    // let proxy = "https://cors-anywhere.herokuapp.com/";
-      let api = `http://api.openweathermap.org/data/2.5/weather?q=${cityname}&appid=fb432b1c02b03d4b64d1edf087066a08`;
+    let proxy = "https://cors-anywhere.herokuapp.com/";
+      let api = `${proxy}http://api.openweathermap.org/data/2.5/weather?q=${cityname}&appid=fb432b1c02b03d4b64d1edf087066a08`;
       fetch(api)
       .then((response) => {
         return response.json();
@@ -65,8 +65,8 @@ window.addEventListener("load", () => {
       long = position.coords.longitude;
       lat = position.coords.latitude;
       console.log(lat,long);
-      // let proxy = "https://cors-anywhere.herokuapp.com/";
-      let api = `http://api.openweathermap.org/data/2.5/weather?lat=${lat}&lon=${long}&appid=fb432b1c02b03d4b64d1edf087066a08`;
+      let proxy = "https://cors-anywhere.herokuapp.com/";
+      let api = `${proxy}http://api.openweathermap.org/data/2.5/weather?lat=${lat}&lon=${long}&appid=fb432b1c02b03d4b64d1edf087066a08`;
       fetch(api)
         .then((response) => {
           return response.json();
